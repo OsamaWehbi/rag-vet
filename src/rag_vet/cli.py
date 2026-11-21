@@ -175,5 +175,9 @@ def rules_cmd() -> None:
 
 
 def main() -> None:
+    # Never crash on a console that cannot show a character from a document.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
     # Click expands wildcards in arguments on Windows, which would turn --exclude/--ignore globs into file paths.
     app(windows_expand_args=False)
