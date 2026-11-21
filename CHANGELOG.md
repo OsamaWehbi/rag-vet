@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-21
+
 ### Added
 
 - `rag-vet scan` for Markdown, HTML, PDF, DOCX and plain-text documents, with table, JSON, SARIF 2.1.0 and Markdown
@@ -21,3 +23,6 @@ All notable changes to this project are documented here. The format follows
 - Chunk-aware findings: each finding lists the chunks that hold it, and says when it is split across chunks.
 - `rag-vet extract` to show the visible and hidden text of a document, and `rag-vet pin` to write a corpus lockfile.
 - GitHub Action, demo corpus of clean and poisoned documents, and a generated rules reference.
+
+[Unreleased]: https://github.com/OsamaWehbi/rag-vet/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/OsamaWehbi/rag-vet/releases/tag/v0.1.0
