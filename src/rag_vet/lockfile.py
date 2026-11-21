@@ -19,7 +19,7 @@ def digest(path: Path) -> str:
 
 def write(lock_path: Path, documents: dict[str, str]) -> None:
     doc = {"version": LOCK_VERSION, "tool": "rag-vet", "documents": dict(sorted(documents.items()))}
-    lock_path.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
+    lock_path.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 def read(lock_path: Path) -> dict[str, str]:

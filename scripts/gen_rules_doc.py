@@ -41,5 +41,5 @@ for r in RULES.values():
         f"**Remediation:** {r.remediation}",
     ]
 Path(__file__).resolve().parent.parent.joinpath("docs", "rules.md").write_text(
-    "\n".join(lines) + "\n", encoding="utf-8"
+    "\n".join(lines) + "\n", encoding="utf-8", newline="\n"
 )
